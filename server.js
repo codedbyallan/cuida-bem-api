@@ -6,18 +6,12 @@ const server = jsonServer.create();
 const router = jsonServer.router('db.json');
 const middlewares = jsonServer.defaults();
 
-// Permitir requisições do app mobile
+// Middlewares básicos
 server.use(cors());
 server.use(jsonServer.bodyParser);
 server.use(middlewares);
 
-/**
- * Exemplo de rota customizada opcional:
- *  - Futuramente podemos criar /login aqui.
- *  - Por enquanto, vamos usar /usuarios?email=&password= diretamente do app.
- */
-
-// Rota raiz opcional só para teste rápido
+// Rota raiz só para teste
 server.get('/', (req, res) => {
   res.json({
     message: 'API CuidaBem rodando com JSON Server',
@@ -33,10 +27,16 @@ server.get('/', (req, res) => {
   });
 });
 
-// Demais rotas padrão do JSON Server
+// Rotas padrão do JSON Server
 server.use(router);
 
+// 🔹 Modo local (npm start) -> abre porta
 const port = process.env.PORT || 3000;
-server.listen(port, () => {
-  console.log(`✅ JSON Server CuidaBem rodando na porta ${port}`);
-});
+if (!process.env.VERCEL) {
+  server.listen(port, () => {
+    console.log(`✅ JSON Server CuidaBem rodando na porta ${port}`);
+  });
+}
+
+// 🔹 Export para a Vercel (serverless handler)
+module.exports = server;
