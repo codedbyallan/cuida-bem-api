@@ -1,0 +1,77 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "name": "João Silva",
+      "email": "joao@email.com",
+      "password": "123456",
+      "age": 78,
+      "createdAt": "2024-11-01T10:00:00.000Z"
+    }
+  ],
+  "medicamentos": [
+    {
+      "id": 1,
+      "userId": 1,
+      "nome": "Losartana",
+      "dosagem": "50mg",
+      "horario": "08:00",
+      "frequencia": "diario",
+      "observacoes": "Tomar com água",
+      "ativo": true
+    }
+  ],
+  "compromissos": [
+    {
+      "id": 1,
+      "userId": 1,
+      "titulo": "Consulta cardiologista",
+      "data": "2024-11-22",
+      "hora": "14:30",
+      "medico": "Dr. Carlos",
+      "especialidade": "Cardiologia",
+      "local": "Clínica Coração Feliz",
+      "lembrete": "Chegar 15 minutos antes"
+    }
+  ],
+  "lembretes": [
+    {
+      "id": 1,
+      "userId": 1,
+      "titulo": "Tomar água",
+      "descricao": "Beber 1 copo de água",
+      "tipo": "diario",
+      "hora": "10:00",
+      "ativo": true,
+      "done": false
+    }
+  ],
+  "alarmes": [
+    {
+      "id": 1,
+      "userId": 1,
+      "titulo": "Alarme exercício",
+      "tipo": "intervalo",
+      "intervaloMinutos": 120,
+      "ativo": false
+    }
+  ],
+  "contatos": [
+    {
+      "id": 1,
+      "userId": 1,
+      "nome": "Maria Souza",
+      "tipo": "Emergência",
+      "telefone": "(31) 99999-0000",
+      "observacoes": "Filha"
+    }
+  ],
+  "perfil_familiar": [
+    {
+      "id": 1,
+      "userId": 1,
+      "nome": "Família Silva",
+      "quantidadeDependentes": 1
+    }
+  ]
+}
