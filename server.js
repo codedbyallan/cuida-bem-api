@@ -1,60 +1,36 @@
 // server.js
 const jsonServer = require('json-server');
-const cors = require('cors');
+const server = jsonServer.create();
+const router = jsonServer.router(require('./db.json')); // carrega o JSON em memória
+const middlewares = jsonServer.defaults();
 
-function createServer() {
-  const server = jsonServer.create();
-  const router = jsonServer.router('db.json');
-  const middlewares = jsonServer.defaults();
+server.use(middlewares);
+server.use(jsonServer.bodyParser);
 
-  server.use(cors());
-  server.use(jsonServer.bodyParser);
-  server.use(middlewares);
+// Rota de login (somente leitura)
+server.post('/login', (req, res) => {
+  const { email, password } = req.body;
 
-  // Rota raiz só para teste rápido
-  server.get('/', (req, res) => {
-    res.json({
-      message: 'API CuidaBem rodando com JSON Server',
-      endpoints: [
-        '/usuarios',
-        '/medicamentos',
-        '/compromissos',
-        '/lembretes',
-        '/alarmes',
-        '/contatos',
-        '/perfil_familiar'
-      ]
-    });
-  });
+  // json-server já usa lowdb internamente em memória
+  const db = router.db; 
+  const user = db
+    .get('usuarios')
+    .find({ email, password })
+    .value();
 
-  server.use(router);
-
-  return server;
-}
-
-// 🔹 Servidor local (npm start)
-if (!process.env.VERCEL) {
-  const localServer = createServer();
-  const port = process.env.PORT || 3000;
-  localServer.listen(port, () => {
-    console.log(`✅ API CuidaBem rodando local na porta ${port}`);
-  });
-}
-
-// 🔹 Handler para a Vercel (Serverless Function)
-module.exports = (req, res) => {
-  try {
-    const server = createServer();
-    return server(req, res);
-  } catch (err) {
-    console.error('🔥 Erro na função serverless:', err);
-    res.statusCode = 500;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(
-      JSON.stringify({
-        error: 'Erro interno na API CuidaBem',
-        detail: err.message,
-      })
-    );
+  if (!user) {
+    return res.status(401).json({ message: 'Credenciais inválidas' });
   }
-};
+
+  // token fake só pra simular backend real
+  return res.json({
+    token: 'fake-jwt-token',
+    user,
+  });
+});
+
+// Demais rotas REST (GET, POST etc.)
+// ATENÇÃO: na Vercel, qualquer "escrita" (POST/PUT/DELETE) não persiste de verdade
+server.use(router);
+
+module.exports = server;
