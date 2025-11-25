@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Manoel Gomes",
-      "email": "manoel@teste.com",
+      "email": "manoelgomes@canetaazul.com",
       "password": "1234567",
       "age": 78,
       "createdAt": "2024-12-01T10:00:00.000Z"
@@ -57,7 +57,7 @@
       "createdAt": "2024-11-20T10:00:00.000Z"
     }
   ],
-  "medicamentos": [
+    "medicamentos": [
     {
       "id": 1,
       "userId": 1,
@@ -66,6 +66,46 @@
       "horario": "08:00",
       "frequencia": "diario",
       "observacoes": "Tomar com água",
+      "ativo": true
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "nome": "Metformina",
+      "dosagem": "850mg",
+      "horario": "12:00",
+      "frequencia": "diario",
+      "observacoes": "Tomar após o almoço",
+      "ativo": true
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "nome": "Atorvastatina",
+      "dosagem": "20mg",
+      "horario": "21:30",
+      "frequencia": "diario",
+      "observacoes": "Tomar antes de dormir",
+      "ativo": true
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "nome": "Omeprazol",
+      "dosagem": "20mg",
+      "horario": "06:30",
+      "frequencia": "diario",
+      "observacoes": "Tomar em jejum",
+      "ativo": true
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "nome": "Suplemento de Cálcio + Vitamina D",
+      "dosagem": "1 comprimido",
+      "horario": "15:00",
+      "frequencia": "diario",
+      "observacoes": "Tomar junto com lanche da tarde",
       "ativo": true
     }
   ],
@@ -78,8 +118,52 @@
       "hora": "22:30",
       "medico": "Dr. Cavendish",
       "especialidade": "Tarólogo",
-      "local": "Clínica Bh Tarot",
+      "local": "Clínica BH Tarot",
       "lembrete": "Chegar 15 minutos antes"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "titulo": "Consulta de rotina",
+      "data": "2025-11-26",
+      "hora": "09:00",
+      "medico": "Dra. Helena",
+      "especialidade": "Geriatra",
+      "local": "Clínica Vida Plena",
+      "lembrete": "Levar exames de sangue"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "titulo": "Fisioterapia",
+      "data": "2025-11-27",
+      "hora": "14:30",
+      "medico": "Dr. Paulo",
+      "especialidade": "Fisioterapeuta",
+      "local": "Espaço Movimento Leve",
+      "lembrete": "Usar roupa confortável"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "titulo": "Grupo da Terceira Idade",
+      "data": "2025-11-28",
+      "hora": "16:00",
+      "medico": "Coordenação do grupo",
+      "especialidade": "Convivência",
+      "local": "Centro de Convivência Alegria",
+      "lembrete": "Levar documento e carteira de vacina"
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "titulo": "Retorno de cardiologia",
+      "data": "2025-12-02",
+      "hora": "10:15",
+      "medico": "Dr. Roberto",
+      "especialidade": "Cardiologista",
+      "local": "Hospital Coração Seguro",
+      "lembrete": "Anotar sintomas dos últimos dias"
     }
   ],
   "lembretes": [
@@ -90,6 +174,46 @@
       "descricao": "Beber 1 copo de água",
       "tipo": "diario",
       "hora": "10:00",
+      "ativo": true,
+      "done": false
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "titulo": "Alongar as pernas",
+      "descricao": "Levantar da cadeira e alongar por 5 minutos",
+      "tipo": "intervalo",
+      "hora": "11:00",
+      "ativo": true,
+      "done": false
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "titulo": "Ligar para a neta",
+      "descricao": "Telefonar para saber como foi a semana",
+      "tipo": "unico",
+      "hora": "19:00",
+      "ativo": true,
+      "done": false
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "titulo": "Verificar pressão",
+      "descricao": "Medir pressão arterial com o aparelho",
+      "tipo": "diario",
+      "hora": "08:30",
+      "ativo": true,
+      "done": false
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "titulo": "Organizar remédios da semana",
+      "descricao": "Separar comprimidos no organizador semanal",
+      "tipo": "semanal",
+      "hora": "17:00",
       "ativo": true,
       "done": false
     }
@@ -103,6 +227,42 @@
       "hora": "20:00",
       "intervaloMinutos": null,
       "ativo": true
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "titulo": "Hora de caminhar",
+      "tipo": "diario",
+      "hora": "07:00",
+      "intervaloMinutos": null,
+      "ativo": true
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "titulo": "Pausa para alongamento",
+      "tipo": "intervalo",
+      "hora": null,
+      "intervaloMinutos": 120,
+      "ativo": true
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "titulo": "Colocar colírio",
+      "tipo": "diario",
+      "hora": "09:30",
+      "intervaloMinutos": null,
+      "ativo": true
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "titulo": "Lanche da tarde",
+      "tipo": "diario",
+      "hora": "15:30",
+      "intervaloMinutos": null,
+      "ativo": true
     }
   ],
   "contatos": [
@@ -113,14 +273,46 @@
       "tipo": "Emergência",
       "telefone": "(31) 99999-0000",
       "observacoes": "Filha"
-    }
-  ],
-  "perfil_familiar": [
+    },
     {
-      "id": 1,
+      "id": 2,
       "userId": 1,
-      "nome": "Família Silva",
-      "quantidadeDependentes": 1
+      "nome": "José Carlos",
+      "tipo": "Família",
+      "telefone": "(31) 98888-1111",
+      "observacoes": "Irmão mais velho"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "nome": "Clínica Vida Plena",
+      "tipo": "Saúde",
+      "telefone": "(31) 3222-3344",
+      "observacoes": "Clínica da geriatra"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "nome": "Farmácia Bem Cuidar",
+      "tipo": "Serviço",
+      "telefone": "(31) 3777-8899",
+      "observacoes": "Entrega remédios em casa"
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "nome": "Centro de Convivência Alegria",
+      "tipo": "Atividades",
+      "telefone": "(31) 3555-6677",
+      "observacoes": "Grupo da terceira idade"
+    },
+    {
+      "id": 6,
+      "userId": 1,
+      "nome": "Plano de Saúde VidaMais",
+      "tipo": "Saúde",
+      "telefone": "0800 123 456",
+      "observacoes": "Central de atendimento 24h"
     }
   ]
 }
