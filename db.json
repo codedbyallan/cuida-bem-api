@@ -100,8 +100,8 @@
       "userId": 1,
       "titulo": "Alarme exercício",
       "tipo": "intervalo",
-      "intervaloMinutos": 120,
-      "ativo": false
+      "intervaloMinutos": 1440,
+      "ativo": true
     }
   ],
   "contatos": [
