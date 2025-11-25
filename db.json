@@ -4,9 +4,9 @@
       "id": 1,
       "name": "Manoel Gomes",
       "email": "manoel@teste.com",
-      "password": "123456",
+      "password": "1234567",
       "age": 78,
-      "createdAt": "2024-11-01T10:00:00.000Z"
+      "createdAt": "2024-12-01T10:00:00.000Z"
     },
     {
       "id": 2,
