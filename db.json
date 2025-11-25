@@ -98,9 +98,10 @@
     {
       "id": 1,
       "userId": 1,
-      "titulo": "Alarme exercício",
-      "tipo": "intervalo",
-      "intervaloMinutos": 1440,
+      "titulo": "Pilates",
+      "tipo": "diario",
+      "hora": "20:00",
+      "intervaloMinutos": null,
       "ativo": true
     }
   ],
