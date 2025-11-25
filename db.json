@@ -66,7 +66,8 @@
       "horario": "08:00",
       "frequencia": "diario",
       "observacoes": "Tomar com água",
-      "ativo": true
+      "ativo": true,
+      "alarme": true
     },
     {
       "id": 2,
@@ -76,7 +77,8 @@
       "horario": "12:00",
       "frequencia": "diario",
       "observacoes": "Tomar após o almoço",
-      "ativo": true
+      "ativo": true,
+      "alarme": true
     },
     {
       "id": 3,
@@ -86,7 +88,8 @@
       "horario": "21:30",
       "frequencia": "diario",
       "observacoes": "Tomar antes de dormir",
-      "ativo": true
+      "ativo": true,
+      "alarme": true
     },
     {
       "id": 4,
@@ -96,7 +99,8 @@
       "horario": "06:30",
       "frequencia": "diario",
       "observacoes": "Tomar em jejum",
-      "ativo": true
+      "ativo": true,
+      "alarme": true
     },
     {
       "id": 5,
@@ -106,7 +110,8 @@
       "horario": "15:00",
       "frequencia": "diario",
       "observacoes": "Tomar junto com lanche da tarde",
-      "ativo": true
+      "ativo": true,
+      "alarme": true
     }
   ],
   "compromissos": [
