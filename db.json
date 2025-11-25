@@ -2,8 +2,8 @@
   "usuarios": [
     {
       "id": 1,
-      "name": "João Silva 1",
-      "email": "joao@teste.com",
+      "name": "Manoel Gomes",
+      "email": "manoel@teste.com",
       "password": "123456",
       "age": 78,
       "createdAt": "2024-11-01T10:00:00.000Z"
